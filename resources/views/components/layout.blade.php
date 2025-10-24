@@ -46,7 +46,7 @@
                 <nav class="flex flex-col space-y-4">
                     <a href="{{ url('/') }}" class="text-gray-700 hover:bg-gray-100 p-2 rounded">Home</a>
                     <a href="{{ url('/produk') }}" class="text-gray-700 hover:bg-gray-100 p-2 rounded">Produk Kami</a>
-                    <a href="{{ url('/wisata') }}" class="text-gray-700 hover:bg-gray-100 p-2 rounded">Wisata</a>
+                    <a href="{{ url('/wisata') }}" class="text-gray-700 hover:bg-gray-100 p-2 rounded">Eduwisata</a>
                     <a href="{{ url('/berita') }}" class="text-gray-700 hover:bg-gray-100 p-2 rounded">Berita</a>
                     <a href="#" class="mt-4 bg-green-600 text-white text-center px-5 py-2 rounded-md font-semibold hover:bg-green-700">Kontak Kami</a>
                 </nav>
