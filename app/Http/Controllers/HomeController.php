@@ -20,7 +20,7 @@ class HomeController extends Controller
                                 ->take(6)
                                 ->get();
                                 
-        $latestBeritas = Berita::latest()->take(3)->get();
+        $latestBeritas = Berita::latest()->take(1)->get();
         $latestWisatas = Wisata::latest()->take(3)->get();
         return view('home', [
             'featuredProducts' => $featuredProducts,
