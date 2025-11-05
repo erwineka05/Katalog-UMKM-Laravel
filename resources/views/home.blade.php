@@ -4,9 +4,9 @@
         <section class="container mx-auto px-6 py-16">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="text-center md:text-left">
-                    <span class="text-green-600 font-semibold tracking-wider uppercase">#KATALOG UMBULHARJO</span>
+                    <span class="text-green-600 font-semibold tracking-wider uppercase">#KATALOG PRODUK</span>
                     <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2">Serba - Serbi Buah Tangan <span class="text-green-600">Umbulharjo</span></h1>
-                    <p class="mt-4 text-gray-600 text-lg">Mendukung usaha kecil dan mikro, melestarikan budaya, dan menghadirkan buah tangan terbaik dari lereng Merapi. Dari kuliner, fashion hingga kerajinan tangan, setiap produk menyimpan cerita khas Umbulharjo</p>
+                    <p class="mt-4 text-gray-600 text-lg">Mendukung pelaku usaha, melestarikan budaya, dan menghadirkan buah tangan terbaik dari lereng Merapi. Dari kuliner, fashion hingga kerajinan tangan, setiap produk menyimpan cerita khas Umbulharjo</p>
                     <a href="{{ url('/produk') }}" class="mt-8 inline-block bg-gray-800 text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-900">Lihat Produk</a>
                 </div>
                 <div class="mt-8 md:mt-0">
@@ -23,7 +23,7 @@
                     <div class="group relative bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                         <a href="{{ route('produk.show', $product) }}" class="block">
                             <div class="w-full aspect-square md:h-80 overflow-hidden">
-                                {{-- Safety Check --}}
+                                
                                 @if($product->images->isNotEmpty())
                                     <img src="{{ asset('storage/' . $product->images->first()->image_url) }}" alt="{{ $product->name }}" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
                                 @else
@@ -54,7 +54,7 @@
 
     <section class="py-20 bg-white"> 
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Jelajahi Eduwisata Umbulharjo</h2>
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Jelajahi Eduwisata <span class="text-green-600">Umbulharjo</span></h2>
             @if ($latestWisatas->count() > 0)
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     @foreach ($latestWisatas as $wisata)

@@ -72,7 +72,7 @@
                     </div>
 
                     @php
-                        $whatsappNumber = $product->phone_number ?? env('WHATSAPP_NUMBER', '6281234567890');
+                        $whatsappNumber = $product->phone_number ?? env('WHATSAPP_NUMBER', '6287731728778');
                         $message = "Halo, saya tertarik dengan produk '" . $product->name . "'";
                         $whatsappUrl = "https://wa.me/" . $whatsappNumber . "?text=" . urlencode($message);
                     @endphp
@@ -113,7 +113,7 @@
                     <ul class="text-sm text-gray-600 mt-6 space-y-2">
                         <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Produk Tersedia (Ready Stock)</li>
                         <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Pesan Langsung via WhatsApp</li>
-                        <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Pengiriman Seluruh Indonesia</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Oleh-oleh khas Umbulharjo</li>
                     </ul>
 
                     <div class="mt-6 pt-4 border-t">
