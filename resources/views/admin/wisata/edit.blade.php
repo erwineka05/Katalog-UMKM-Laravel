@@ -32,6 +32,11 @@
                             <textarea name="deskripsi" id="deskripsi" rows="10" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" required>{{ old('deskripsi', $wisata->deskripsi) }}</textarea>
                         </div>
 
+                        <div class="mb-4">
+                            <label for="youtube_url" class="block font-medium text-sm text-gray-700">Link Video YouTube (Opsional)</label>
+                            <input type="url" name="youtube_url" id="youtube_url" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="https://www.youtube.com/watch?v=..." value="{{ old('youtube_url', $wisata->youtube_url) }}">
+                        </div>
+
                         {{-- Upload Gambar --}}
                         <div class="mb-6">
                             <label class="block font-medium text-sm text-gray-700">Gambar Saat Ini</label>

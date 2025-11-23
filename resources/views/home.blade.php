@@ -10,7 +10,7 @@
                     <a href="{{ url('/produk') }}" class="mt-8 inline-block bg-gray-800 text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-900">Lihat Produk</a>
                 </div>
                 <div class="mt-8 md:mt-0">
-                    <img src="{{ asset('images/products/umkm.jpg') }}" alt="Model Baju Muslim" class="rounded-lg shadow-xl w-full h-full object-cover">
+                    <img src="{{ asset('images/icons/carousel-container.jpeg') }}" alt="Model Baju Muslim" class="rounded-lg w-full h-full object-cover">
                 </div>
             </div>
         </section>
@@ -121,7 +121,7 @@
                     @endforeach
                 </div>
 
-                {{-- Tombol Lihat Semua Berita --}}
+                
                 <div class="text-center mt-12">
                      <a href="{{ route('berita.index') }}" class="px-8 py-3 border-2 border-gray-800 text-gray-800 font-semibold rounded-md hover:bg-gray-800 hover:text-white transition-colors">
                         Lihat Semua Berita

@@ -21,7 +21,7 @@
                 <p class="text-gray-700 text-sm flex-grow">
                     {{ Illuminate\Support\Str::limit($item->deskripsi, 150) }}
                 </p>
-                {{-- Link "Lihat Peta" dihapus, digantikan underline pada hover --}}
+                
                 <span class="mt-4 text-sm font-semibold text-green-600 group-hover:underline self-start">Lihat Detail →</span>
             </div>
         </a>

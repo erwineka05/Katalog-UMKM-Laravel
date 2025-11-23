@@ -21,7 +21,7 @@ class HomeController extends Controller
                                 ->get();
                                 
         $latestBeritas = Berita::latest()->take(3)->get();
-        $latestWisatas = Wisata::latest()->take(3)->get();
+        $latestWisatas = Wisata::inRandomOrder()->take(3)->get();
         return view('home', [
             'featuredProducts' => $featuredProducts,
             'otherProducts' => $otherProducts,
@@ -38,6 +38,8 @@ class HomeController extends Controller
             $query->where('name', 'like', '%' . $keyword . '%');
         }
         
+        $products = $query->inRandomOrder()->paginate(30);
+
         $products = $query->get();
         return view('produk', [
             'products' => $products,

@@ -13,5 +13,6 @@ class Wisata extends Model
         'nama',
         'deskripsi',
         'gambar_url',
+        'youtube_url',
     ];
 }

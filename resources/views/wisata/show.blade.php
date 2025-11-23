@@ -22,6 +22,39 @@
                 <p>{!! nl2br(e($wisata->deskripsi)) !!}</p>
             </div>
 
+            @if($wisata->youtube_url)
+            <div class="mt-8">
+                <h3 class="font-bold text-xl text-gray-900 mb-4">Video Liputan</h3>
+            <div class="w-full aspect-video rounded-lg shadow-lg overflow-hidden">
+            @php
+                $video_id = '';
+                $url = $wisata->youtube_url;
+                
+                if (preg_match('/youtube\.com\/watch\?v=([^\&\?\/]+)/', $url, $id)) {
+                    $video_id = $id[1];
+                } else if (preg_match('/youtu\.be\/([^\&\?\/]+)/', $url, $id)) {
+                    $video_id = $id[1];
+                } else if (preg_match('/youtube\.com\/embed\/([^\&\?\/]+)/', $url, $id)) {
+                    $video_id = $id[1];
+                }
+            @endphp
+
+            @if($video_id)
+                <iframe 
+                    class="w-full h-full"
+                    src="https://www.youtube.com/embed/{{ $video_id }}" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            @else
+                <p class="text-red-500">Format link video tidak valid.</p>
+            @endif
+        </div>
+    </div>
+@endif
+
             <div class="mt-12 pt-6 border-t">
                 <a href="{{ route('wisata.index') }}" class="inline-flex items-center text-green-600 hover:text-green-800 font-semibold">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>

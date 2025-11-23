@@ -35,7 +35,8 @@ class AdminWisataController extends Controller
         $validated = $request->validate([
             'nama' => 'required|string|max:255',
             'deskripsi' => 'required|string',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'youtube_url' => 'nullable|url', 
         ]);
 
         $imagePath = null;
@@ -48,6 +49,7 @@ class AdminWisataController extends Controller
             'nama' => $validated['nama'],
             'deskripsi' => $validated['deskripsi'],
             'gambar_url' => $imagePath,
+            'youtube_url' => $validated['youtube_url'],
         ]);
 
         return redirect()->route('admin.wisata.index')->with('success', 'Tempat wisata berhasil ditambahkan.');
@@ -70,6 +72,7 @@ class AdminWisataController extends Controller
             'nama' => 'required|string|max:255',
             'deskripsi' => 'required|string',
             'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', 
+            'youtube_url' => 'nullable|url',
         ]);
 
         $imagePath = $wisata->gambar_url; 
@@ -83,7 +86,8 @@ class AdminWisataController extends Controller
         $wisata->update([
             'nama' => $validated['nama'],
             'deskripsi' => $validated['deskripsi'],
-            'gambar_url' => $imagePath, 
+            'gambar_url' => $imagePath,
+            'youtube_url' => $validated['youtube_url'], 
         ]);
 
         return redirect()->route('admin.wisata.index')->with('success', 'Tempat wisata berhasil diperbarui.');
